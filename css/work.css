@@ -1,0 +1,222 @@
+:root {
+  --blue: #92f2ff;
+  --green: #00ff00;
+  --red: #ff3838;
+  --yellow: #ffd700;
+  --orange: #ffa500;
+  --purple: #685bff;
+}
+
+html {
+  background-color: #000;
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav > ul {
+  min-width: 35rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav > ul > li {
+  font-size: 24px;
+  font-weight: 600;
+}
+.nav-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.nav-link.active {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-link:hover {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-name {
+  background-image: linear-gradient(
+    90deg,
+    #6e40aa,
+    #963db3,
+    #bf3caf,
+    #e3419e,
+    #fe4b83,
+    #ff5e64,
+    #ff7747,
+    #fb9633,
+    #e2b72f,
+    #c7d63c,
+    #c7d63c
+  );
+  background-position: 100% 0;
+  background-size: 500% 100%;
+  transition: background-position 1s linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+.animated {
+  animation: 1.75s linear 0s infinite alternate both running textGradient;
+}
+.transitioned:hover {
+  background-position: 0 0;
+}
+@keyframes textGradient {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0% 0;
+  }
+}
+
+/* End of Navbar */
+.work-h1 {
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(to bottom, #00d1ff 40%, #0038ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6rem;
+  font-weight: bold;
+  padding: 30px 0px;
+  z-index: 99;
+}
+.work-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+}
+.card {
+  width: 23rem;
+  height: 24rem;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.work-row a {
+  text-decoration: none;
+  color: #fff !important;
+}
+.synth {
+  background-color: #212426;
+}
+
+.winzo {
+  background: linear-gradient(to bottom, #28062a, #540227);
+}
+
+.tiara {
+  background-color: #1d1d1e;
+}
+
+.url {
+  background-color: #fcedea;
+}
+.spotify {
+  background-color: #191414;
+}
+.ola {
+  background-color: #a7d300;
+}
+.card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: translate(0, -10px);
+  transition: all 0.3s ease-in-out;
+}
+.card:hover .overlay {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.overlay {
+  position: absolute;
+  bottom: 10%;
+  padding: 5px 20px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover .overlay .text {
+  display: block;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+/* ------------------------------------ */
+
+/* Mobile Breakpoint */
+@media (max-width: 992px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav > ul {
+    min-width: 15rem;
+    max-width: 20rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 2rem;
+  }
+  nav > ul > li {
+    font-size: 1.25rem;
+  }
+  .navbar-name {
+    font-size: 1.8rem;
+  }
+  .work-h1 {
+    top: 28%;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  .work-row {
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+  }
+  .card {
+    width: 80vw;
+    height: 30vh;
+  }
+  .card img {
+    width: 60%;
+    height: auto;
+  }
+}
+
+/* End mobile */
